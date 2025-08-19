@@ -1,0 +1,19 @@
+name: AI PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  ai-review:
+    runs-on: ubuntu-latest
+    name: AI Code Review
+    steps:
+      - name: AI PR Reviewer
+        uses: aryannaithani/ai-review@v1
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
