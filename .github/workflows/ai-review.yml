@@ -14,6 +14,6 @@ jobs:
     name: AI Code Review
     steps:
       - name: AI PR Reviewer
-        uses: aryannaithani/ai-review@v1
+        uses: aryannaithani/ai-review@v2
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
